@@ -102,7 +102,7 @@ bool UAH_ASW::EDROOMIsComponentFinished()
 {
 
 
-	return ( TCManager.EDROOMIsComponentFinished() && HK_FDIRMng.EDROOMIsComponentFinished() && BKGTCExec.EDROOMIsComponentFinished() && CEDROOMComponent::EDROOMIsComponentFinished());
+	return ( TCManager.EDROOMIsComponentFinished() && HK_FDIRMng.EDROOMIsComponentFinished() && BKTCExec.EDROOMIsComponentFinished() && CEDROOMComponent::EDROOMIsComponentFinished());
 
 }
 
