@@ -37,9 +37,11 @@
 #ifdef FT_UAH_ASW_ICU_SERV_20_PARAM_10_ACCESS_0070
 
 //TODO 07 Use EmuGSS_TCProgram20_3_uint8 to Set PID 20 value to 99 (0x63) and after that
-//use EmuGSS_TCProgram20_1 to read PID 20
-
-
+//use EmuGSS_TCProgram20_1 to read PID 20 //DONE
+EmuGSS_TCProgram20_3_uint8 prog_FT_0070_step0(OBT_AFTER_POWER_ON+10
+,"FT_SOLO_EPD_ICU_SERV_20_0070_step0, Report PID 20 Value ", 20 , 99 );
+EmuGSS_TCProgram20_1 prog_FT_0070_step1(OBT_AFTER_POWER_ON+10
+,"FT_SOLO_EPD_ICU_SERV_20_0070_step1, Read PID 20 Value ", 20 );
 #endif
 
 #ifdef FT_UAH_ASW_ICU_SERV_20_ERROR_WRITE_PID_0080
@@ -49,8 +51,12 @@
 	//Use EmuGSS_TCProgram20_1 to read PID 10
 	//Use EmuGSS_TCProgram20_3_uint32 to write the value 33 to a read only PID 3
 		//Check TM[1.4] is received
-
-
+EmuGSS_TCProgram20_3_uint32 prog_FT_0080_step0(OBT_AFTER_POWER_ON+10
+,"FT_SOLO_EPD_ICU_SERV_20_0080_step0, Set PID 10 Value ", 10 , 55 );
+EmuGSS_TCProgram20_1 prog_FT_0080_step1(OBT_AFTER_POWER_ON+10
+,"FT_SOLO_EPD_ICU_SERV_20_0080_step1, Read PID 10 Value ", 10 );
+EmuGSS_TCProgram20_3_uint32 prog_FT_0080_step2(OBT_AFTER_POWER_ON+10
+,"FT_SOLO_EPD_ICU_SERV_20_0080_step2, Set PID 3 Value ", 3 , 33 );
 
 
 #endif

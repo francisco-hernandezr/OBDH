@@ -23,7 +23,7 @@ OBJS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-asw/components/ccbkgtcexec/src \
+asw/components/bktcexec/src \
 asw/components/cchk_fdirmng/src \
 asw/components/cctcmanager/src \
 asw/components/uah_asw/src \
