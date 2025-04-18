@@ -35,7 +35,7 @@ rtems_task Init (uint32_t arg){
 	UAH_ASW	comp1(1, 13, EDROOMprioNormal, 1024, systemDeployment.GetComp1Memory());
 	CCTCManager	comp2(2, 10, EDROOMprioHigh, 4096, systemDeployment.GetComp2Memory());
 	CCHK_FDIRMng	comp3(3, 13, EDROOMprioNormal, 4096, systemDeployment.GetComp3Memory());
-	CCBKGTCExec	comp4(4, 10, EDROOMprioVeryLow, 1024, systemDeployment.GetComp4Memory());
+	CCBKGTCExec	comp4(4, 10, EDROOMprioNormal, 1024, systemDeployment.GetComp4Memory());
  
 	systemDeployment.Config(&comp1, &comp2, &comp3, &comp4);
  
