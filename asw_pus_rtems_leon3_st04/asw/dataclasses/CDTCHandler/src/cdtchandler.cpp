@@ -56,7 +56,10 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 	CDTCExecCtrl execCtrl;
 	switch (type) {
 
-	//TODO 04 Set ST[04,X] as ExecCtrlHK_FDIRTC
+	//TODO 04 Set ST[04,X] as ExecCtrlHK_FDIRTC //DONE
+	case (4):
+		execCtrl.mExecCtrl = ExecCtrlHK_FDIRTC;
+		break;
 	case (3):
 		execCtrl.mExecCtrl = ExecCtrlHK_FDIRTC;
 		break;
@@ -91,8 +94,10 @@ void CDTCHandler::ExecTC() {
 			pus_service3_exec_tc(&mTCHandler);
 			break;
 
-	//TODO 05 Add TC[04,X] execution
-
+	//TODO 05 Add TC[04,X] execution //DONE
+		case (04):
+			pus_service4_exec_tc(&mTCHandler);
+		break;
 
 
 
