@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -213,18 +213,19 @@ FDoHK_FDIR()
 0
 1
  
-6
+7
  
 VNextTimeout+= Pr_Time(1,0); // Add X sec + Y microsec 
 time=VNextTimeout; 
  pus_service4_update_all_stats();
 pus_services_update_params();
 pus_service3_do_HK();
+pus_services_do_FDIR();
 [ServiceRequest]
 InformAt
 HK_FDIRTimer
 EDROOMSignalTimeout
- 
+
 EDROOMprioNormal
 MsgDataHandler
 FExecHK_FDIR_TC()
