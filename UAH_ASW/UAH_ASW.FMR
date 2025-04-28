@@ -6,7 +6,7 @@
 [Nombre Modelo]
 UAH_ASW
 [Modificado]
-0
+1
 [Opciones Modelo]
 [Version Opciones Modelo]
 4
@@ -19,9 +19,9 @@ UAH_ASW
 [CurrentTarget]
 0
 [MESP Directory]
-C:\Users\cobog\OneDrive\Documentos\GitHub\Gestion_de_Datos\asw_pus_rtems_leon3_st05_12\asw
+C:\Users\franc\OneDrive\Documentos\GitHub\OBDH\asw_pus_rtems_leon3_st05_12\asw
 [MESP main Directory]
-C:\Users\cobog\OneDrive\Documentos\GitHub\Gestion_de_Datos\asw_pus_rtems_leon3_st05_12
+C:\Users\franc\OneDrive\Documentos\GitHub\OBDH\asw_pus_rtems_leon3_st05_12
 [MESP main prototype]
 rtems_task Init (uint32_t arg)
 [MESP main return]

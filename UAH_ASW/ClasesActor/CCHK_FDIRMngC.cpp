@@ -71,6 +71,7 @@ time=VNextTimeout;
  pus_service4_update_all_stats();
 pus_services_update_params();
 pus_service3_do_HK();
+pus_services_do_FDIR();
    //Program absolute timer 
    HK_FDIRTimer.InformAt( time ); 
 }

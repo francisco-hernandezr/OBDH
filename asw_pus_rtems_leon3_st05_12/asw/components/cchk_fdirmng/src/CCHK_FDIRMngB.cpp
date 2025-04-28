@@ -68,16 +68,11 @@ void	CCHK_FDIRMng::EDROOM_CTX_Top_0::FDoHK_FDIR()
  
 VNextTimeout+= Pr_Time(1,0); // Add X sec + Y microsec 
 time=VNextTimeout; 
- 
+ pus_service4_update_all_stats();
 pus_services_update_params();
-
-pus_service4_update_all_stats();
-
 pus_service3_do_HK();
-
-  //TODO 07 call pus_services_do_FDIR();
-
-//Program absolute timer
+pus_services_do_FDIR();
+   //Program absolute timer 
    HK_FDIRTimer.InformAt( time ); 
 }
 
