@@ -89,7 +89,7 @@ void	CCTCManager::EDROOM_CTX_Top_0::FFwdBKGTC()
 	
 		// Complete Data 
 	
-	*pSBKGTC_Data= =VCurrentTC;
+	*pSBKGTC_Data=VCurrentTC;
    //Send message 
    CPBKGExecCtrl.send(SBKGTC,pSBKGTC_Data,&EDROOMPoolCDTCHandler); 
 }
