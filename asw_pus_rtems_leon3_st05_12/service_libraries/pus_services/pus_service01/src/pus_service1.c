@@ -5,7 +5,7 @@
  *      Author: Oscar Rodriguez Polo
  */
 
-/****************************************************************************
+/**************************
  *
  *   This program is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU General Public License
@@ -22,7 +22,7 @@
  *   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,USA.
  *
  *
- ****************************************************************************/
+ **************************/
 
 #include "../../pus_service01/include/public/pus_service1.h"
 
@@ -106,7 +106,30 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 
 				//TODO 09   Accept ST[05] & ST[12] TCs
 
+				//SERVICIO 5
+			case(5):
+				switch (ptc_handler->tc_df_header.subtype) {
+				case(5):
+				case(6):
+					break;
+				default:
+					accept_report.accept_status = TCAcceptationSubTypeError;
+				}
+				break;
 
+				//SERVICIO 12
+			case(12):
+				switch (ptc_handler->tc_df_header.subtype) {
+				case(1):
+				case(2):
+				case(6):
+					break;
+				default:
+					accept_report.accept_status = TCAcceptationSubTypeError;
+				}
+				break;
+
+				//HECHO
 
 			case (20):
 				switch (ptc_handler->tc_df_header.subtype) {

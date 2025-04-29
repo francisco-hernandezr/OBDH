@@ -5,7 +5,7 @@
  *      Author: Oscar Rodriguez Polo
  */
 
-/****************************************************************************
+/**************************
  *
  *   This program is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU General Public License
@@ -22,7 +22,7 @@
  *   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,USA.
  *
  *
- ****************************************************************************/
+ **************************/
 
 #include "public/config.h"
 #include "public/basic_types.h"
@@ -99,7 +99,9 @@ void pus_services_do_FDIR() {
 						&fault_info)) {
 					//TODO 08  Check If TM[5,X] is enabled using
 					// pus_service5_is_EvID_enabled
-					if (                                                 ) {
+					if (pus_service5_is_EvID_enabled(EvID)) {
+
+					//HECHO
 
 						pus_service1_tx_TM_5_X_param_check_value_fail(EvID,
 								&fault_info);
@@ -124,4 +126,3 @@ void pus_services_update_params(){
 	sample_sys_data_pool_params();
 
 }
-

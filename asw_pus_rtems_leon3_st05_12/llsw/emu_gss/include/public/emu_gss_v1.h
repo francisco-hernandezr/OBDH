@@ -26,14 +26,14 @@
 
 #include "../emu_gss/emu_gss_pus_service04.h"
 
-//TODO 12 Add #include emu_gss_pus_service05.h
-//#include "../emu_gss/emu_gss_pus_service05.h"
+//TODO 12 Add #include emu_gss_pus_service05.h //DONE
+#include "../emu_gss/emu_gss_pus_service05.h"
 
 //#include "../emu_gss/emu_gss_pus_service06.h"
 //#include "../emu_gss/emu_gss_pus_service09.h"
 
-//TODO 13 Add #include emu_gss_pus_service12.h
-//#include "../emu_gss/emu_gss_pus_service12.h"
+//TODO 13 Add #include emu_gss_pus_service12.h //DONE
+#include "../emu_gss/emu_gss_pus_service12.h"
 
 #include "../emu_gss/emu_gss_pus_service17.h"
 //#include "../emu_gss/emu_gss_pus_service19.h"

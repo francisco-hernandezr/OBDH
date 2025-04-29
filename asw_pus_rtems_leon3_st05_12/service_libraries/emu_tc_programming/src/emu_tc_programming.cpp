@@ -30,8 +30,8 @@
 
 //TODO 14 Execute FT_UAH_ASW_Monitoring_0100 and check log with expected log
 #define FT_UAH_ASW_Monitoring_0100
-//#define FT_UAH_ASW_Monitoring_EvDisabled_0110
-//#define FT_UAH_ASW_Monitoring_MaskedValue_0120
+#define FT_UAH_ASW_Monitoring_EvDisabled_0110
+#define FT_UAH_ASW_Monitoring_MaskedValue_0120
 
 #ifdef FT_UAH_ASW_Monitoring_0100
 
@@ -63,6 +63,8 @@ EmuGSS_TCProgram20_3_uint8 prog_FT_0100_step_4(FT_0100_TIME_step4,
 //Same steps than FT_UAH_ASW_Monitoring_0100 but use
 //EmuGSS_TCProgram5_6 to disable event 0x4002 at OBT_AFTER_POWER_ON + 12
 
+
+
 #ifdef FT_UAH_ASW_Monitoring_EvDisabled_0110
 
 #define FT_0110_TIME_step0 (OBT_AFTER_POWER_ON + 5)
@@ -71,6 +73,25 @@ EmuGSS_TCProgram20_3_uint8 prog_FT_0100_step_4(FT_0100_TIME_step4,
 #define FT_0110_TIME_step3 (OBT_AFTER_POWER_ON + 18)
 #define FT_0110_TIME_step4 (OBT_AFTER_POWER_ON + 40)
 #define FT_0110_TIME_step5 (OBT_AFTER_POWER_ON + 60)
+
+EmuGSS_TCProgram12_5_Limit_UINT8 prog_FT_0110_step_0(FT_0110_TIME_step0,
+		"FT_UAH_ASW_Monitoring_0110 step 0, Config PMODID 0 for monitoring PID 15 with limits [1,20]",
+		0, 15, 1, 2, 1, 0x4001, 20, 0x4002);
+
+EmuGSS_TCProgram12_1 prog_FT_0110_step_1(FT_0110_TIME_step1,
+		"FT_UAH_ASW_Monitoring_0110 step 1, Enable Monitoring PMODID 0", 0);
+
+EmuGSS_TCProgram5_6 prog_FT_0110_step_2(FT_0110_TIME_step2,
+		"FT_UAH_ASW_Monitoring_0110 step 2, Disable Monitoring event report", 0x4002);
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0110_step_3(FT_0110_TIME_step3,
+		"FT_UAH_ASW_Monitoring_0100 step 3, Update PID 15 to 99", 15, 99);
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0110_step_4(FT_0110_TIME_step4,
+		"FT_UAH_ASW_Monitoring_0100 step 4, Update PID 15 to 5", 15, 5);
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0110_step_5(FT_0110_TIME_step5,
+		"FT_UAH_ASW_Monitoring_0100 step 5, Update PID 15 to 0", 15, 0);
 
 
 #endif
@@ -94,6 +115,23 @@ EmuGSS_TCProgram20_3_uint8 prog_FT_0100_step_4(FT_0100_TIME_step4,
 
 #ifdef FT_UAH_ASW_Monitoring_MaskedValue_0120
 
+#define FT_0120_TIME_step0 (OBT_AFTER_POWER_ON)
+#define FT_0120_TIME_step1 (OBT_AFTER_POWER_ON + 5)
+#define FT_0120_TIME_step2 (OBT_AFTER_POWER_ON + 7)
+#define FT_0120_TIME_step3 (OBT_AFTER_POWER_ON + 9)
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0120_step_0(FT_0120_TIME_step0,
+		"FT_UAH_ASW_Monitoring_0120 step 0, Update PID 16 to 0", 16, 3);
+
+EmuGSS_TCProgram12_5_Value_UINT8 prog_FT_0120_step1(FT_0120_TIME_step1,
+"FT_SOLO_EPD_ICU_SERV_12_0120_Step1 ,Define PMONID 1 para monitorizar el PID 16",
+1, 16, 10, 2 , 0x0F, 0x03, 0x4003);
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0120_step_2(FT_0120_TIME_step2,
+		"FT_UAH_ASW_Monitoring_0120 step 2, Update PID 16 to 2", 16, 2);
+
+EmuGSS_TCProgram20_3_uint8 prog_FT_0120_step_3(FT_0120_TIME_step3,
+		"FT_UAH_ASW_Monitoring_0120 step 3, Update PID 16 to 2", 16, 3);
 
 #endif
 
